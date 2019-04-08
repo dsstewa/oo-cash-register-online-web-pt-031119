@@ -23,7 +23,8 @@ def apply_discount
   if @discount == 0
    "There is no discount to apply."
    else
-    @total = @total * ((100 -discount) * 0.01)
+
+    @total = @total * ((100 -@discount) * 0.01)
     "After the discount, the total comes to $#{@total.round}."
    end
 end
@@ -36,9 +37,8 @@ end
   
 def void_last_transaction
   @total = @total - @price
-end
-  
-  
+  end
+
 end
 
 
